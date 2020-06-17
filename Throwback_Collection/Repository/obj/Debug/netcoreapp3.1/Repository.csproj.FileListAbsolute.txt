@@ -1,0 +1,5 @@
+C:\Users\KTH\OneDrive\Documents\DevCodeCamp\Projects\Throwback_Collection\Throwback_Collection\Repository\bin\Debug\netcoreapp3.1\Repository.deps.json
+C:\Users\KTH\OneDrive\Documents\DevCodeCamp\Projects\Throwback_Collection\Throwback_Collection\Repository\bin\Debug\netcoreapp3.1\Repository.dll
+C:\Users\KTH\OneDrive\Documents\DevCodeCamp\Projects\Throwback_Collection\Throwback_Collection\Repository\obj\Debug\netcoreapp3.1\Repository.csprojAssemblyReference.cache
+C:\Users\KTH\OneDrive\Documents\DevCodeCamp\Projects\Throwback_Collection\Throwback_Collection\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfoInputs.cache
+C:\Users\KTH\OneDrive\Documents\DevCodeCamp\Projects\Throwback_Collection\Throwback_Collection\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfo.cs
