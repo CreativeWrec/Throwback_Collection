@@ -6,23 +6,21 @@ using System.Text;
 
 namespace Repository.Models
 {
-    public class Collector
+    public class CollectionObj
     {
         [Key]
-        public int CollectorId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-
-        [ForeignKey("Collection")]
         public int CollectionId { get; set; }
-        public CollectionObj Collection { get; set; }
+        public string Name { get; set; }
+        public string GameTitle { get; set; }
+        public string Genre { get; set; }
+        public string System { get; set; }
+
+        [ForeignKey("Collector")]
+        public int CollectorId { get; set; }
+        public Collector Collector { get; set; }
 
         [ForeignKey("Item")]
         public int ItemId { get; set; }
         public Item Item { get; set; }
-
-        [ForeignKey("WishList")]
-        public int WishListId { get; set; }
-        public string WishList { get; set; }
     }
 }
