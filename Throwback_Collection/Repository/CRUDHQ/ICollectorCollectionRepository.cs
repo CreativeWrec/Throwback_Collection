@@ -7,5 +7,7 @@ namespace Repository.CRUDHQ
 {
     public interface ICollectorCollectionRepository : IRepositoryBase<CollectionObj>
     {
+        CollectionObj GetCollectionObj(int collectorId, int itemId);
+        void CreateCollectorCollection(CollectionObj collectionObj);
     }
 }

@@ -2,6 +2,7 @@
 using Repository.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Repository.Data
@@ -10,7 +11,10 @@ namespace Repository.Data
     {
         public CollectorCollectionRepository(ApplicationDbContext applicationDbContext) : base(applicationDbContext)
         {
-
         }
+
+        public CollectionObj GetCollectionObj(int collectorId, int itemId) => FindByCondition(c => c.CollectorId.Equals(collectorId) && c.ItemId.Equals(itemId)).SingleOrDefault();
+
+        public void CreateCollectorCollection(CollectionObj collectionObj) => Create(collectionObj);
     }
 }
