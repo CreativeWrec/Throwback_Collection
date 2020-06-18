@@ -8,18 +8,11 @@ namespace Repository.Models
 {
     public class CollectionObj
     {
-        [Key]
-        public int CollectionId { get; set; }
-        public string Name { get; set; }
-        public string GameTitle { get; set; }
-        public string Genre { get; set; }
-        public string System { get; set; }
-
-        [ForeignKey("Collector")]
+        [Key, ForeignKey("Collector")]
         public int CollectorId { get; set; }
         public Collector Collector { get; set; }
 
-        [ForeignKey("Item")]
+        [Key, ForeignKey("Item")]
         public int ItemId { get; set; }
         public Item Item { get; set; }
     }

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Repository.Models
 {
-    class CollectorLikes
+    public class CollectorLikes
     {
         [Key]
         public bool IsDislike { get; set; }

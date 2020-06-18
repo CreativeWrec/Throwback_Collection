@@ -11,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Repository;
+using Repository.CRUDHQ;
 using Repository.Data;
 
 namespace Throwback_Collection
@@ -27,9 +29,10 @@ namespace Throwback_Collection
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(opts =>
-            opts.UseSqlServer(Configuration.GetConnectionString
-            ("sqlConnection")));
+            services.AddDbContext<ApplicationDbContext>(opts => opts.UseSqlServer(Configuration.GetConnectionString("sqlConnection")));
+            services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
+
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

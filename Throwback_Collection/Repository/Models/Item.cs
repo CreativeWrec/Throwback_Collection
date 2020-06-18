@@ -13,10 +13,8 @@ namespace Repository.Models
         public string Name { get; set; }
         public string Type { get; set; }
         public string Genre { get; set; }
-        public int Release { get; set;  }
+        public int ReleaseDate { get; set;  }
 
-        [ForeignKey("Collector")]
-        public int CollectorId { get; set; }
-        public Collector Collector { get; set; }
+        
     }
 }

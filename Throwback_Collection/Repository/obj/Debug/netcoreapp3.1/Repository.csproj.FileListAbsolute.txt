@@ -9,3 +9,4 @@ C:\Users\KTH\OneDrive\Documents\DevCodeCamp\Projects\Throwback_Collection\Throwb
 C:\Users\KTH\OneDrive\Documents\DevCodeCamp\Projects\Throwback_Collection\Throwback_Collection\Repository\obj\Debug\netcoreapp3.1\Repository.dll
 C:\Users\KTH\OneDrive\Documents\DevCodeCamp\Projects\Throwback_Collection\Throwback_Collection\Repository\obj\Debug\netcoreapp3.1\Repository.pdb
 C:\Users\KTH\OneDrive\Documents\DevCodeCamp\Projects\Throwback_Collection\Throwback_Collection\Repository\obj\Debug\netcoreapp3.1\Repository.genruntimeconfig.cache
+C:\Users\KTH\OneDrive\Documents\DevCodeCamp\Projects\Throwback_Collection\Throwback_Collection\Repository\obj\Debug\netcoreapp3.1\Repository.csprojAssemblyReference.cache

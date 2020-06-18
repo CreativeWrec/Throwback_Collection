@@ -13,11 +13,11 @@ namespace Repository.Models
         public string WishList { get; set; }
 
 
-        [ForeignKey("CollectorId")]
+        [Key, ForeignKey("CollectorId")]
         public int CollectorId { get; set; }
         public Collector Collector { get; set; }
 
-        [ForeignKey("ItemId")]
+        [Key, ForeignKey("ItemId")]
         public int ItemId { get; set; }
         public Item Item { get; set; }
 

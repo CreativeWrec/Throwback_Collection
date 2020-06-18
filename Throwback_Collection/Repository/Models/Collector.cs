@@ -15,7 +15,7 @@ namespace Repository.Models
 
         [ForeignKey("Collection")]
         public int CollectionId { get; set; }
-        public CollectionObj Collection { get; set; }
+        public CollectionObj CollectorCollection { get; set; }
 
         [ForeignKey("Item")]
         public int ItemId { get; set; }
