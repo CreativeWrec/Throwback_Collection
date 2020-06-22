@@ -9,8 +9,8 @@ namespace TB_Collection.Models
 {
     public class CollectorWishlist
     {
-        [Key]
-        public int WishListId { get; set; }
+        //[Key]
+        //public int WishListId { get; set; }
         public string WishList { get; set; }
 
 

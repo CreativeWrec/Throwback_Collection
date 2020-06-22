@@ -9,7 +9,7 @@ namespace TB_Collection.Models
 {
     public class CollectorLikes
     {
-        [Key]
+        
         public bool IsDislike { get; set; }
 
         [ForeignKey("Collector")]

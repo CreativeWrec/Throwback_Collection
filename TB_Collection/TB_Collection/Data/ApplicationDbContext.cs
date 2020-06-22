@@ -16,6 +16,8 @@ namespace TB_Collection.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            base.OnModelCreating(builder);
+
             builder.Entity<CollectionObj>().HasKey(o => new { o.CollectorId, o.ItemId });
             builder.Entity<CollectorWishlist>().HasKey(w => new { w.CollectorId, w.ItemId });
             builder.Entity<CollectorLikes>().HasKey(l => new { l.CollectorId, l.ItemId });

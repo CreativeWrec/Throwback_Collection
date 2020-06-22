@@ -14,16 +14,16 @@ namespace TB_Collection.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        [ForeignKey("Collection")]
-        public int CollectionId { get; set; }
-        public CollectionObj CollectorCollection { get; set; }
+        //[ForeignKey("Collection")]
+        //public int CollectionId { get; set; }
+        //public CollectionObj Collection { get; set; }
 
-        [ForeignKey("Item")]
-        public int ItemId { get; set; }
-        public Item Item { get; set; }
+        //[ForeignKey("Item")]
+        //public int ItemId { get; set; }
+        //public Item Item { get; set; }
 
-        [ForeignKey("WishList")]
-        public int WishListId { get; set; }
-        public string WishList { get; set; }
+        //[ForeignKey("WishList")]
+        //public int WishListId { get; set; }
+        //public CollectorWishlist WishList { get; set; }
     }
 }
