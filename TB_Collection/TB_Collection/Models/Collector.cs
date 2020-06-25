@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,6 +15,10 @@ namespace TB_Collection.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
+        [ForeignKey("IdentityUser")]
+        public string IdentityUserId { get; set; }
+        public IdentityUser IdentityUser { get; set; }
+        
         //[ForeignKey("Collection")]
         //public int CollectionId { get; set; }
         //public CollectionObj Collection { get; set; }
