@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -22,7 +23,10 @@ namespace TB_Collection.Controllers
         // GET: Collectors
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Collectors.ToListAsync());
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var collector = _context.Collectors.Where(c => c.IdentityUserId == userId).FirstOrDefault();
+
+            return View(collector);
         }
 
         // GET: Collectors/Details/5
@@ -58,7 +62,9 @@ namespace TB_Collection.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(collector);
+                var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+                collector.IdentityUserId = userId;
+                _context.Collectors.Add(collector);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -68,16 +74,9 @@ namespace TB_Collection.Controllers
         // GET: Collectors/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var collector = _context.Collectors.Where(c => c.IdentityUserId == userId).FirstOrDefault();
 
-            var collector = await _context.Collectors.FindAsync(id);
-            if (collector == null)
-            {
-                return NotFound();
-            }
             return View(collector);
         }
 

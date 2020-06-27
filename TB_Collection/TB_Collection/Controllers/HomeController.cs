@@ -25,17 +25,21 @@ namespace TB_Collection.Controllers
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId != null)
             {
-                var collector = _context.Collectors.Where(c => c.IdentityUserId == userId).SingleOrDefault();
+                var collector = _context.Collectors.Where(c => c.IdentityUserId == userId).FirstOrDefault();
                 if (collector == null)
                 {
                     return RedirectToAction("Create", "Collectors");
                 }
+                else
+                {
+                    return RedirectToAction("Index", "Collectors");
+                }
             }
             else
             {
-                return RedirectToAction("Index", "Collectors");
+                return View();
             }
-            return View();
+           
         }
 
         public IActionResult Privacy()
